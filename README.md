@@ -73,9 +73,14 @@ Pixel-perfect on every screen size. Designed for the mobile creators your audien
 
 ## 🚀 Quick Start (Local Development)
 
-### Prerequisites
-- Node.js v18+
-- A [Supabase](https://supabase.com) account (free)
+### 📋 Prerequisites Check
+
+Ensure you have the required tools installed. Open your terminal or command prompt and run:
+
+- **Node.js** (v18+): `node -v`
+- **npm** (v9+): `npm -v`
+- **Git**: `git --version`
+- A [Supabase](https://supabase.com) account (free tier is sufficient)
 
 ### 1. Clone the repository
 
@@ -86,11 +91,15 @@ cd Conn
 
 ### 2. Install dependencies
 
+The installation process is similar across operating systems:
+
+**Linux / macOS / Windows:**
 ```bash
 npm install
 ```
+*(Windows Users: Conn uses `bcryptjs`, a pure JavaScript implementation, so you do not need Python or Visual Studio Build Tools to compile native modules!)*
 
-### 3. Set up Supabase
+### 3. Set up Database (Supabase)
 
 1. Create a free project at [supabase.com](https://supabase.com)
 2. Go to **Dashboard → SQL Editor**
@@ -99,28 +108,40 @@ npm install
 
 ### 4. Configure environment variables
 
-Create a `.env` file in the root:
+Create a `.env` file in the root directory:
 
+**Linux / macOS:**
+```bash
+cp .env.example .env # If available, otherwise create manually
+nano .env
+```
+
+**Windows:**
+```powershell
+New-Item -ItemType File -Name ".env"
+notepad .env
+```
+
+Add the following to your `.env` file:
 ```env
 SUPABASE_URL=https://your-project-id.supabase.co
 SUPABASE_SERVICE_KEY=your-service-role-key
 JWT_SECRET=your-random-secret-min-32-chars
 ```
 
-> 💡 Generate a secure JWT secret: `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
+> 💡 **Tip:** Generate a secure JWT secret by running:
+> `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`
 
 ### 5. Start the server
 
 ```bash
 npm start
 ```
-
-Visit `http://localhost:3000` 🎉
+Visit `http://localhost:3000` to see your local instance running! 🎉
 
 ### 6. (Optional) Seed existing data
 
-If you have local JSON data files from a previous version:
-
+If you have local JSON data files from a previous version, you can migrate them:
 ```bash
 npm run seed
 ```
