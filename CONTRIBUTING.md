@@ -6,10 +6,9 @@ Thank you for your interest in contributing to Conn! We welcome contributions fr
 
 ### For GSSoC 2026 Participants
 
-1. **Follow Up**
-2. **Fork the repository** on GitHub
-3. **Star the repository** (optional but appreciated!)
-4. **Clone your fork** locally:
+1. **Fork the repository** on GitHub
+2. **Star the repository** (optional but appreciated!)
+3. **Clone your fork** locally:
    ```bash
    git clone https://github.com/YOUR_USERNAME/Conn.git
    cd Conn
@@ -29,57 +28,51 @@ For detailed installation and setup instructions, please refer to the [README.md
 - Set up your `.env` file with Supabase credentials
 - Run `npm start` to begin development
 
-## 📋 GSSoC 2026 Guidelines
+## 📋 Contribution Workflow & Guidelines
 
-### Issue Selection
+### 1. Issue Lifecycle & Selection
 
-- Look for issues labeled `gssoc`, `good first issue`, or `help wanted`
-- Comment on the issue with "I would like to work on this" before starting
-- Wait for maintainer assignment before beginning work
-- One issue per contributor at a time (unless approved otherwise)
+- **Search First:** Before opening a new issue, check if it already exists.
+- **Find an Issue:** Look for issues labeled `gssoc`, `good first issue`, `bug`, or `enhancement`.
+- **Claiming:** Comment "I would like to work on this" on the issue. **Wait for a maintainer to assign it to you** before you begin coding.
+- **Limits:** Please claim only one issue at a time to give everyone a fair chance to contribute.
+- **Stale Issues:** If an issue is assigned but shows no activity for 7 days, it may be reassigned.
 
-### Branch Naming
+### 2. Branching Strategy
 
-Use descriptive branch names:
-- `gssoc/feature/your-feature-name`
-- `gssoc/fix/issue-description`
-- `gssoc/docs/update-documentation`
+A clean Git tree makes review easier. Always branch off of `main` and use the following naming conventions:
+- **Features:** `feature/short-description` (e.g., `feature/dark-mode`)
+- **Bug Fixes:** `fix/issue-description` (e.g., `fix/auth-cookie-bug`)
+- **Documentation:** `docs/what-was-updated` (e.g., `docs/api-endpoints`)
+- **GSSoC Participants:** Prefix your branch with `gssoc/` (e.g., `gssoc/feature/add-social-icons`)
 
-### Commit Messages
+### 3. Commit Standards
 
-Follow conventional commit format:
-- `feat: add dark mode toggle`
-- `fix: resolve login authentication error`
-- `docs: update API documentation`
-- `style: format code with prettier`
-- `refactor: simplify link management logic`
-- `test: add unit tests for auth module`
+We use [Conventional Commits](https://www.conventionalcommits.org/). Your commit messages should be structured as follows:
+- `feat: add dark mode toggle` (New feature)
+- `fix: resolve login authentication error` (Bug fix)
+- `docs: update API documentation` (Documentation only)
+- `style: format code with prettier` (Formatting, missing semi-colons, etc)
+- `refactor: simplify link management logic` (Code change that neither fixes a bug nor adds a feature)
+- `test: add unit tests for auth module` (Adding missing tests)
 
-### Pull Request Process
+### 4. Pull Request Process
 
-1. **Update your branch** with the latest changes from upstream:
+1. **Sync your fork** with the latest upstream changes to avoid merge conflicts:
    ```bash
    git fetch upstream
    git rebase upstream/main
    ```
-
-2. **Commit your changes** with clear messages
-
-3. **Push to your fork**:
+2. **Push to your fork**:
    ```bash
    git push origin gssoc/feature/your-feature-name
    ```
-
-4. **Create a Pull Request** with:
-   - Clear title describing the change
-   - Detailed description of what you did and why
-   - Reference the related issue number (e.g., "Fixes #123")
-   - Screenshots for UI changes
-   - Link to deployed preview (if applicable)
-
-5. **PR Title Format for GSSoC**:
-   - `[GSSoC] Add feature: description`
-   - `[GSSoC] Fix issue: description`
+3. **Open a Pull Request** against the upstream `main` branch. Ensure your PR includes:
+   - A clear, descriptive title (`feat: add custom backgrounds`)
+   - A detailed description explaining the "Why" and "What" of your changes.
+   - The phrase `Fixes #ISSUE_NUMBER` to auto-close the issue on merge.
+   - **Visual Proof:** Screenshots or screen recordings if you modified the UI.
+4. **Review:** Maintainers will review your PR. Be open to feedback and ready to make requested changes!
 
 ## 🎯 Code Style Guidelines
 
