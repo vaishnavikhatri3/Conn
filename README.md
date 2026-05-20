@@ -18,6 +18,7 @@
 </div>
 
 ---
+
 ## 📚 Table of Contents
 
 - [What is Conn?](#-what-is-conn)
@@ -29,9 +30,11 @@
 - [API Reference](#-api-reference)
 - [Roadmap](#️-roadmap)
 - [Releases](#-releases)
+- [Troubleshooting](#-troubleshooting)
 - [Contributing](#-contributing)
 - [Contact](#-contact)
 - [License](#-license)
+
 ---
 
 ## 📌 What is Conn?
@@ -305,6 +308,7 @@ Conn/
 | [v1.0.0](https://github.com/mayo-byte07/Conn/releases/tag/v1.0.0) | 🚀 Initial launch |
 
 ---
+
 ## 🛠 Troubleshooting
 
 ### Port already in use
@@ -318,7 +322,6 @@ Verify that:
 
 ### JWT errors
 Ensure `JWT_SECRET` is properly added in the `.env` file.
-
 ---
 
 ## 🤝 Contributing
