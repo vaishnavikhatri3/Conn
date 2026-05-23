@@ -130,7 +130,7 @@ Create a `.env` file in the root directory:
 
 **Linux / macOS:**
 ```bash
-cp .env.example .env # If available, otherwise create manually
+cp .env.example .env 
 nano .env
 ```
 
